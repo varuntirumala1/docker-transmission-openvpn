@@ -14,7 +14,7 @@ VOLUME /config
 
 RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
     && apk --no-cache add ip6tables ufw@community openvpn shadow transmission-daemon transmission-cli \
-        openrc jq tinyproxy tinyproxy-openrc openssh unrar git \
+        openrc jq tzdata tinyproxy tinyproxy-openrc openssh unrar git \
     && mkdir -p /opt/transmission-ui \
     && echo "Install Flood for Transmission" \
     && wget -qO- https://github.com/johman10/flood-for-transmission/releases/download/latest/flood-for-transmission.tar.gz | tar xz -C /opt/transmission-ui \
